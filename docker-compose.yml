@@ -1,0 +1,11 @@
+services:
+  queryembed:
+    build:
+      - .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - "D:/Coding/Docker/models": /queryembed/models
+      - /logs:/queryembed/Logs
